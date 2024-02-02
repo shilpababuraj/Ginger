@@ -39,7 +39,9 @@ const LoginScreen =({navigation})  => {
 
       const data = await response.json();
       console.log(data);
-      navigation.navigate('Home')
+      const authToken = '1079|2FUzNhOQYkFzvvQLEeeZ77kKirohz9MqPE5u12uZ'
+      navigation.navigate('Home',{authToken : authToken});
+      
     } catch (error) {
       console.error(error);
       Alert.alert('Error', error.message);
